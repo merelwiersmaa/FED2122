@@ -1,4 +1,6 @@
-/* ALGEMEEN */
+/***************************************************************
+ALGEMEEN
+***************************************************************/
 @font-face {
     font-family: AppleFontTekst;
     src: url("fonts/SFUIText/SFUIText-Regular.otf");
@@ -9,15 +11,37 @@
     padding: 0;
 }
 
+:root {
+    --colorKnop: rgb(0, 112, 199);
+    --textKnop: rgb(255, 255, 255);
+    --colorKnopHover: rgb(89, 176, 243);
+}
+
+body {
+    font-family: AppleFontTekst;    
+}
+
+
+
+
+
+/***************************************************************
+HEADER
+***************************************************************/
 header img {
     width: 6em;
     padding-top: 2em;
     padding-left: 2em;
     position: fixed;
 }
-body {
-    font-family: AppleFontTekst;    
-}
+
+
+
+
+
+/***************************************************************
+EERSTE SECTIE
+***************************************************************/
 section:first-of-type {
     display: flex;
     flex-direction: column;
@@ -25,48 +49,55 @@ section:first-of-type {
     padding-left: 5em;
 }
 
-section:nth-of-type(2) {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-}
-
 h1 {
     font-size: 3.5em;
-
+    padding-bottom: 1.5em;
 }
 
-h1:last-of-type {
-    padding-bottom: 1em;
-}
 p {
     font-size: 2em;
     max-width: 15em;
 }
 
-button {
+p:last-of-type {
+    padding-bottom: 2em;
+}
+
+a {
     border: none;
     cursor: pointer;
     border-radius: 5em;
     width: 10em;
     padding: .8em;
-    background-color: rgb(0, 112, 199);
+    background-color: var(--colorKnop);
+    color: var(--textKnop);
+    font-size: 1em;
+    list-style: none;
+    text-decoration: none;
 }
 
-button a {
-    color: white;
-    font-size: 1.3em;
-}
-
-button:hover {
-    background-color: rgb(89, 176, 243);
+a:hover {
+    background-color: var(--colorKnopHover);
     transition: .2s;
 }
 
-a {
-    list-style: none;
-    text-decoration: none;
-    color: black;
+
+
+
+
+/***************************************************************
+TWEEDE SECTIE
+***************************************************************/
+section:nth-of-type(2) {
+    padding-top: 5em;
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    font-size: 2em;
+    font-weight: bold;
+    font-style: italic;
 }
 
 section:nth-of-type(2) img {

@@ -1,4 +1,6 @@
-/* ALGEMEEN */
+/******************************************************************
+ALGEMEEN
+******************************************************************/
 @font-face {
     font-family: AppleFontTekst;
     src: url("fonts/SFUIText/SFUIText-Regular.otf");
@@ -9,10 +11,25 @@
     padding: 0;
 }
 
+:root {
+    --colorKnop: rgb(0, 112, 199);
+    --textKnop: rgb(255, 255, 255);
+    --colorKnopHover: rgb(89, 176, 243);
+    --onderstebuttonsBackground: rgb(199, 199, 199);
+    --onderstebuttonsTekst: rgb(82, 82, 82);
+}
+
 body {
     font-family: AppleFontTekst;    
 }
 
+
+
+
+
+/******************************************************************
+HEADER
+******************************************************************/
 nav img {
     width: 6em;
    
@@ -26,26 +43,17 @@ nav ul {
     padding-left: 2em;
     padding-right: 2em;
 }
-p {
-    font-size: 1.3em; 
-}
 
-h2 {
-    font-size: 1.3em;
-    color:grey;
-}
-
-
-
-/* dropdown knop */
 button {
     border: none;
     cursor: pointer;
     border-radius: 5em;
     width: 10em;
     padding: .8em;
-    background-color: rgb(0, 112, 199);
+    background-color: var(--colorKnop);
 }
+
+/* dropdown knop */
 
 /* positie voor dropdown items */
 .dropdown {
@@ -57,7 +65,7 @@ button {
 .dropdowncontent {
     display:none;
     position:absolute;
-    background-color: rgb(251, 251, 253);
+    background-color: var(--onderstebuttonsBackground);
     border-radius: 2em;
     z-index: 1;
     min-width: 20em;
@@ -66,7 +74,7 @@ button {
 
 /* de linkjes */
 .dropdowncontent a {
-    color: rgb(0, 112, 199);
+    color: var(--colorKnop);
     text-decoration: none;
     display: block;
     padding-left: 2em;
@@ -81,25 +89,36 @@ button {
 
 .dropdownbutton {
     background-color: transparent;
-    color: grey;
+    color: var(--onderstebuttonsTekst);
 }
 
-/* .dropdownbutton:visited {
-    color: grey;
-} */
-.bewaar a{
-    color:white;
-    font-size:1.3em;
+p:first-of-type {
+    color: var(--textKnop);
 }
 .bewaar:hover {
-    background-color: rgb(89, 176, 243);
+    background-color: var(--colorKnopHover);
     transition: .2s;
 }
 
 a {
     list-style: none;
     text-decoration: none;
+}
 
+
+
+
+
+/******************************************************************
+EERSTE SECTIE
+******************************************************************/
+p {
+    font-size: 1.3em; 
+}
+
+h1 {
+    font-size: 1.3em;
+    color:var(--onderstebuttonsTekst);
 }
 
 section img {
@@ -116,7 +135,7 @@ section ul {
    /* max-width: 30em; */
 }
 .zijkant {
-    color: rgb(0, 112, 199);
+    color: var(--colorKnop);
     background-color: transparent;
 }
 
@@ -127,15 +146,11 @@ section ul:last-of-type {
     justify-content: space-around;
 }
 .grijzebuttons {
-    background: rgb(199, 199, 199);
+    background: var(--onderstebuttonsBackground);
     font-size:.8em;
     width: 5em;
-    color: rgb(82, 82, 82);
+    color: var(--onderstebuttonsTekst);
 }
-/* section button {
-    background-color: transparent;
-    color:rgb(0, 112, 199);
-    text-decoration-line: underline;
-} */
+
 
 

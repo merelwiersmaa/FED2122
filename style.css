@@ -1,4 +1,6 @@
-/* ALGEMEEN */
+/****************************************************************
+ALGEMEEN
+*****************************************************************/
 
 @font-face {
     font-family: AppleFontTekst;
@@ -6,7 +8,26 @@
   }
 
 :root {
+    --backgroundcolorNav: rgb(51, 51, 51);
     --backgroundcolorFirstSection: rgb(251, 251, 253);
+    --textcolorAtjes: rgb(0, 0, 0);
+    --textcolorNavjes: rgb(255, 255, 255);
+    --backgroundcolorThirdsection: rgb(255, 255, 224);
+    --textcolorThirdsection: rgb(255, 165, 0);
+    --backgroundcolorFourthsection: rgb(173, 201, 215);
+    --textcolorFourthsection: rgb(47, 65, 173);
+    --backgroundcolorPaars: rgb(221, 160, 221);
+    --textcolorPaars: rgb(128, 0, 128);
+    --backgroundcolorGroen: rgb(144, 238, 144);
+    --textcolorGroen: rgb(0, 100, 0);
+    --backgroundcolorBlauw: rgb(135, 206, 250);
+    --textcolorBlauw: rgb(0, 0, 139);
+    --backgroundcolorRood: rgb(216, 112, 147);
+    --textcolorRood: rgb(139, 0, 0);
+    --backgroundcolorGoud: rgb(255, 255, 224);
+    --textcolorGoud: rgb(255, 140, 0);
+    --backgroundcolorZwart: rgb(97, 108, 119);
+    --textcolorZwart: rgb(0, 0, 0);
 }
 *, html {
     margin: 0;
@@ -35,7 +56,7 @@ button {
 a {
     list-style: none;
     text-decoration: none;
-    color: black;
+    color: var(--textcolorAtjes);
 }
 
 li {
@@ -46,9 +67,11 @@ li {
 
 
 
-/* HEADER/NAV */
+/****************************************************************
+HEADER
+*****************************************************************/
 header {
-    background-color: rgb(51, 51, 51);
+    background-color: var(--backgroundcolorNav);
     position:fixed;
     width: 100%;
     z-index:100;
@@ -61,7 +84,7 @@ nav {
     padding: 1.5em;
 }
 nav > ul {
-    background-color: rgb(51, 51, 51);
+    background-color: var(--backgroundcolorNav);
     position: fixed;
     left: 0;
     bottom: 0;
@@ -70,14 +93,14 @@ nav > ul {
     padding-left: 2em;
     padding-top:2em;
     font-size: 3em;
-    color: white;
+    
 
     /* zorgt ervoor dar de navigatie niet in beeld is */  
     transform: translateX(-100%); 
 }
 
 nav > ul>li>a {
-    color: white;
+    color: var(--textcolorNavjes);
 }
 
 .hamburger {
@@ -101,7 +124,11 @@ nav.toonMenu ul {
 
 
 
-/* BELOWHEADER/EERSTE SECTIE */
+
+
+/****************************************************************
+EERSTE SECTIE
+*****************************************************************/
 section:first-of-type {
     background-color:var(--backgroundcolorFirstSection);
     display: flex;
@@ -131,9 +158,11 @@ section:first-of-type ul {
 
 
 
-/* TWEEDE SECTIE */
+/****************************************************************
+TWEEDE SECTIE
+*****************************************************************/
 section:nth-of-type(2) {
-    background-color: rgb(248, 245, 245);
+    background-color: var(--backgroundcolorFirstSection);
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -147,36 +176,19 @@ section:nth-of-type(2)>img {
     min-width: 10em;
 }
 
-/* @keyframes iphone-animation {
-    0% {
-    transform:scale(1);
-    }
-    50% {
-    transform:scale(2);
-    }
-    100% {
-    transform:scale(1);
-    } 
-} */
+section:nth-of-type(2)>p:first-of-type {
+    font-size: 4em;
+    padding-bottom: 1em;
+    font-style: italic;
+}
 
+/* met behulp van Sanne :) */
 section:nth-of-type(2) > img:hover  {
-    /* width: 40em; */
     transform:scale(1.5);
 } 
 
-
-
-
-
-
-
- /* bij de transition wil ik dat alleen de afbeelding beweegt, en niet de content eronder
-naar onder schuift. dus dat het op zn plek blijft.
-daarnaast wil ik dat als er niet meer gehoverd wordt, dat de afbeelding langzaam teruggaat naar 
-het eerste formaat, en niet plots terugschiet */
-    /*     */
 section:nth-of-type(2)>p:nth-of-type(3) {
-    color: rgb(92, 94, 97);
+    color: var(--backgroundcolorNav);
     padding: 2em;
 }
 
@@ -184,9 +196,11 @@ section:nth-of-type(2)>p:nth-of-type(3) {
 
 
 
-/* DERDE SECTIE */
+/****************************************************************
+DERDE SECTIE
+*****************************************************************/
 section:nth-of-type(3) {
-    background-color: lightyellow;
+    background-color: var(--backgroundcolorThirdsection);
     padding-top: 5em;
     padding-bottom: 5em;
     display: flex;
@@ -195,9 +209,10 @@ section:nth-of-type(3) {
     align-items: center;
 }
 
-section:nth-of-type(3)>h1 {
-    color: orange;
+section:nth-of-type(3)>h2 {
+    color: var(--textcolorThirdsection);
     padding-bottom: 3em;
+    font-size: 4em;
 }
 
 section:nth-of-type(3) > ul > li > img {
@@ -212,25 +227,28 @@ section:nth-of-type(3) > ul > li > img:hover  {
 } 
 
 section:nth-of-type(3)>ul {
-    
-    /* deze li's wil ik onder elkaar, naast de afbeelding hebben staan */
     display: flex;
     justify-content: center;
     flex-direction: row;
-    color: orange;
+    color: var(--textcolorThirdsection);
     list-style: none;
     font-size: 2em;
     font-weight: bold;
+}
+
+section:nth-of-type(3) p {
+    font-size: 1em;
 }
 
 
 
 
 
-
-/*VIERDE SECTIE*/
+/****************************************************************
+VIERDE SECTIE
+*****************************************************************/
 section:nth-of-type(4) {
-    background-color: rgb(173, 201, 215);
+    background-color: var(--backgroundcolorFourthsection);
     padding-top: 5em;
     display: flex;
     flex-direction: column;
@@ -249,17 +267,19 @@ section:nth-of-type(4) > img:hover {
     transform:scale(1.5);
 } 
 
-section:nth-of-type(4)>h1 {
-    color:rgb(47, 65, 173);
+section:nth-of-type(4)>h2 {
+    color: var(--textcolorFourthsection);
     max-width: 15em;
     padding-bottom: 2em;
+    font-size: 4em;
 }
 
 
 
 
-
-/*VIJFDE SECTIE*/
+/****************************************************************
+VIJFDE SECTIE
+*****************************************************************/
 section:nth-of-type(5){
     display: flex;
     flex-direction: column;
@@ -267,8 +287,9 @@ section:nth-of-type(5){
     align-items: center;
 }
 
-section:nth-of-type(5) > h1 {
+section:nth-of-type(5) > h2 {
     padding-top: 2em;
+    font-size: 4em;
 }
 
 section:nth-of-type(5) > img {
@@ -298,53 +319,56 @@ section:nth-of-type(5) > ul > li > button {
 }
 /* gegevens voor javascript */
 section:nth-of-type(5).achtergrondPaars {
-    background-color: plum;
+    background-color: var(--backgroundcolorPaars);
 }
-section:nth-of-type(5) > h1.headingPaars {
-    color: purple;
+section:nth-of-type(5) > h2.headingPaars {
+    color: var(--textcolorPaars);
 }
 
 section:nth-of-type(5).achtergrondGroen {
-    background-color: lightgreen;
+    background-color: var(--backgroundcolorGroen);
 }
-section:nth-of-type(5) > h1.headingGroen {
-    color: darkgreen;
+section:nth-of-type(5) > h2.headingGroen {
+    color: var(--textcolorGroen);
 }
 
 section:nth-of-type(5).achtergrondBlauw {
-    background-color: lightskyblue;
+    background-color: var(--backgroundcolorBlauw);
 }
-section:nth-of-type(5) > h1.headingBlauw {
-    color: darkblue;
+section:nth-of-type(5) > h2.headingBlauw {
+    color: var(--textcolorBlauw);
 }
 
 section:nth-of-type(5).achtergrondRood {
-    background-color: palevioletred;
+    background-color: var(--backgroundcolorRood);
 }
-section:nth-of-type(5) > h1.headingRood {
-    color: darkred;
+section:nth-of-type(5) > h2.headingRood {
+    color: var(--textcolorRood);
 }
 
 section:nth-of-type(5).achtergrondGoud {
-    background-color: lightyellow;
+    background-color: var(--backgroundcolorGoud);
 }
-section:nth-of-type(5) > h1.headingGoud {
-    color: darkorange;
+section:nth-of-type(5) > h2.headingGoud {
+    color: var(--textcolorGoud);
 }
 
 section:nth-of-type(5).achtergrondZwart {
-    background-color: lightslategray;
+    background-color: var(--backgroundcolorZwart);
 }
-section:nth-of-type(5) > h1.headingZwart {
-    color: black;
+section:nth-of-type(5) > h2.headingZwart {
+    color: var(--textcolorZwart);
 }
 
 
 
 
-/* FOOTER */
+
+/****************************************************************
+FOOTER
+*****************************************************************/
 footer {
-    background-color: lightgrey;
+    background-color: var(--backgroundcolorFirstSection);
     padding-top: 5em;
     padding-left: 2em;
     display:grid;
@@ -368,12 +392,3 @@ footer ul:first-of-type {
 footer li {
     line-height: 2.5em;
 }
-
-/* footer section {
-    grid-row-start: 3;
-}
-
-footer ul:last-of-type{
-    display: flex;
-    align-content: space-between;
-} */
