@@ -203,7 +203,7 @@ ik heb uiteindelijk 1 hele pagina en 2 halve extra pagina's gemaakt (zoals het o
 - comments 
 - readme invullen
 - meer reflectie
-- site goed mop github
+- site goed op github
   
   het is me gelukt om de custom properties in orde te maken en ook heb ik de codes door de validator gehaald en alles dus wat 'netter' gemaakt. (en comments toegevoegd) ook vertelde Rowin mij dat elke section een heading moet hebben, dus ook dat heb ik aangepast. de readme is zometeen ook helemaal ingevuld, alleen de site online zetten via GitHub gaat een beetje moeilijk, want hij geeft een error aan als je de link opent, maar ik weet dus niet welke link ik er dan wel moet neerzetten. gelukkig lukte het nu wel om alle bestanden 'normaal' toe te kunnen voegen op github, dus niet alle bestanden los, maar gewoon complete mapjes met afbeeldingen etc. kon ik er in één keer in zetten. (behalve de 'fonts' map, die was te groot)
   </details>
