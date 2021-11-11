@@ -7,6 +7,10 @@ ALGEMEEN
     src: url("fonts/SFUIText/SFUIText-Regular.otf");
   }
 
+/* hieronder zijn de variabelen aangemaakt met bijbehorende kleurencodes, zodat je bij meerdere elementen alleen de variable
+hoeft te noemen, en dan haalt hij de gegeven kleur van de variable naar voren. Als er dus een bepaalde aanpassing komt aan de huisstijl
+van de website, kan je dus in één keer alle knoppen (bijvoorbeeld) een ander kleur geven, door de variabele aan te passen
+dit scheelt dus werk en is overzichtelijker */
 :root {
     --backgroundcolorNav: rgb(51, 51, 51);
     --backgroundcolorFirstSection: rgb(251, 251, 253);
@@ -72,6 +76,7 @@ HEADER
 *****************************************************************/
 header {
     background-color: var(--backgroundcolorNav);
+    /* de positie van de header is fixed, dat betekent dat hij altijd blijft staan zodra er gescrolld wordt */
     position:fixed;
     width: 100%;
     z-index:100;
@@ -301,6 +306,7 @@ section:nth-of-type(5) > ul {
     padding-bottom: 8em;
 
     /* de buttons wil ik mooier uit elkaar laten staan maar dat lukt me niet.. */
+    /* UPDATE rowin had mij hiermee geholpen door een margin eraan toe te voegen, zie volgende stukje code */
     display: flex;
     align-content: space-around;
     flex-direction: row;
@@ -318,6 +324,7 @@ section:nth-of-type(5) > ul > li > button {
     background: transparent;
 }
 /* gegevens voor javascript */
+/* hieronder staan de kleuren die nog niet zichtbaar zijn, maar pas worden aangeroepen als er op de knopjes gedrukt wordt */
 section:nth-of-type(5).achtergrondPaars {
     background-color: var(--backgroundcolorPaars);
 }

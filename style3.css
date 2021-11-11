@@ -11,6 +11,10 @@ ALGEMEEN
     padding: 0;
 }
 
+/* hieronder zijn de variabelen aangemaakt met bijbehorende kleurencodes, zodat je bij meerdere elementen alleen de variable
+hoeft te noemen, en dan haalt hij de gegeven kleur van de variable naar voren. Als er dus een bepaalde aanpassing komt aan de huisstijl
+van de website, kan je dus in één keer alle knoppen (bijvoorbeeld) een ander kleur geven, door de variabele aan te passen
+dit scheelt dus werk en is overzichtelijker */
 :root {
     --colorKnop: rgb(0, 112, 199);
     --textKnop: rgb(255, 255, 255);
@@ -53,7 +57,7 @@ button {
     background-color: var(--colorKnop);
 }
 
-/* dropdown knop */
+/* hieronder begint de gegevens voor de dropdown knop */
 
 /* positie voor dropdown items */
 .dropdown {
@@ -92,6 +96,7 @@ button {
     color: var(--onderstebuttonsTekst);
 }
 
+/* bewaar knop rechtsboven */
 p:first-of-type {
     color: var(--textKnop);
 }
